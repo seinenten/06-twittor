@@ -1,10 +1,10 @@
 var url = window.location.href;
-var swLocation = '/sw.js';
+var swLocation = '/06-twittor/sw.js';
 
 if ( navigator.serviceWorker ){
 
-    if ( url.includes('06-twittor') ){
-        swLocation = '/06-twittor/sw.js'
+    if ( url.includes('127.0.0.1:8080') ){
+        swLocation = '/sw.js'
     }
 
     navigator.serviceWorker.register(swLocation);
