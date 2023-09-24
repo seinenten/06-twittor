@@ -1,7 +1,13 @@
-
+var url = window.location.href;
+var swLocation = '/sw.js';
 
 if ( navigator.serviceWorker ){
-    navigator.serviceWorker.register('/sw.js');
+
+    if ( url.includes('06-twittor') ){
+        swLocation = '/06-twittor/sw.js'
+    }
+
+    navigator.serviceWorker.register(swLocation);
 }
 
 // Referencias de jQuery
